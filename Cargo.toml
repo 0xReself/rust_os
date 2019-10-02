@@ -1,0 +1,20 @@
+[package]
+name = "os-rust"
+version = "0.1.0"
+authors = ["0xReself <lars.m.schneider2002@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[profile.dev]
+# In case of a panic the deconstructor from stack items wont be called it will get directly aborted
+panic = "abort"
+
+[profile.release]
+# In case of a panic the deconstructor from stack items wont be called it will get directly aborted
+panic = "abort"
+
+[dependencies]
+bootloader = "0.8.0"
+volatile = "0.2.6"
